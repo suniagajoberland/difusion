@@ -17,7 +17,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   const contactos = [
-    new Contacto("Joberland", "Suniaga", "4143693311"),
+    new Contacto("LUIS ALBERTO", "FIGUERA HERRERA", "4265091195"),
+    new Contacto("YESSIKA DEL VALLE", "FIGUEROA RIVERO", "4248656730"),
+    new Contacto("DANIEL CRISTOBAL", "CARPIO CRESPO", "4124734288"),
+    new Contacto("JAVIER ADOLFO", "GIGLIO MEDINA", "4124789908"),
+    new Contacto("EDGAR ENRIQUE", "ALMEIRA CONTRERAS", "4127946879"),
+    new Contacto("NELSON JOSE", "GARCIA RAUSSEO", "4141914200"),
     new Contacto("María", "Gómez", "4143693311"),
     // Agrega manualmente más contactos aquí
   ];
