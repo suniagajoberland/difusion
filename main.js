@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     obtenerEnlaceWhatsApp() {
-      const saludo = `Hola ${this.nombre} ${this.apellido},`;
+      const saludo = `Hola ${this.nombre} ${this.apellido}, es un placer saludarle en esta oportunidad`;
       const numeroConCodigo = `+58${this.telefono}`;
       const enlace = `https://wa.me/${numeroConCodigo}?text=${encodeURIComponent(
         saludo
