@@ -7,7 +7,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     obtenerEnlaceWhatsApp() {
-      const saludo = `Hola ${this.nombre} ${this.apellido}, es un placer saludarle en esta oportunidad`;
+      const saludo = `Hola ${this.nombre} ${this.apellido}, Soy Joberland Rafael Suniaga, tu asesor de ventas de confianza. 🚀 Me encantaría mostrarte nuestras innovadoras soluciones tecnológicas que pueden transformar tu negocio.
+
+🌐 Descubre nuestras ofertas exclusivas: (https://suniagajoberland.github.io/tienda/)
+
+No dudes en contactarme si tienes alguna pregunta o deseas más información. ¡Estamos aquí para ayudarte!
+`;
       const numeroConCodigo = `+58${this.telefono}`;
       const enlace = `https://wa.me/${numeroConCodigo}?text=${encodeURIComponent(
         saludo
@@ -28,7 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     new Contacto("RAECHEL", "CAROLINA CARDENAS SANCHEZ", "4125588804"),
     new Contacto("HUMBERTO", "LUIS HERNANDEZ VILLAMIZAR", "4166090055"),
     new Contacto("NICOLAS", "ANTONIO MATA VASQUEZ", "4248882424"),
-    new Contacto("'-DOUGLAS", "LENIN YUSTY MORALES", "4140217864"),
+    new Contacto("DOUGLAS", "LENIN YUSTY MORALES", "4140217864"),
     new Contacto("LIZ", "ADRIANA COLMENARES MARTINEZ", "4122927596"),
     new Contacto("JESUS", "RAFAEL CASTRO JIMENEZ", "4128635675"),
     new Contacto("LUIS", "ELIGIO MEJIAS VARGAS", "4149841523"),
