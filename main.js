@@ -5823,7 +5823,7 @@ No dudes en contactarme si tienes alguna pregunta o deseas más información. ¡
   ];
 
   const contactosDiv = document.getElementById("contactos");
-  const contactosPorPagina = 50; // 5 columnas * 10 filas
+  const contactosPorPagina = 100; // 5 columnas * 10 filas
   let paginaActual = 1;
 
   function mostrarContactos(pagina) {
