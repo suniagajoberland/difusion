@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     obtenerEnlaceWhatsApp() {
-      const saludo = `Hola ${this.nombre} ${this.apellido}, 
+      const saludo = `¡Hola ${this.nombre} ${this.apellido}!, 
       
 Soy Joberland Rafael Suniaga, tu asesor de ventas de confianza. 🚀 Me encantaría mostrarte nuestras innovadoras soluciones tecnológicas que pueden transformar tu negocio.
 
-🌐 Descubre nuestras ofertas exclusivas: (https://suniagajoberland.github.io/tienda/)
+🕘 Horario de atención: 9am a 5pm
+
+🌐 Descubre nuestras ofertas exclusivas: https://suniagajoberland.github.io/tienda/
 
 No dudes en contactarme si tienes alguna pregunta o deseas más información. ¡Estamos aquí para ayudarte!
 `;
