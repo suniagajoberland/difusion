@@ -5823,8 +5823,10 @@ No dudes en contactarme si tienes alguna pregunta o deseas más información. ¡
   ];
 
   const contactosDiv = document.getElementById("contactos");
-  const contactosPorPagina = 50; // 5 columnas * 10 filas
-  let paginaActual = 1;
+  const contactosPorPagina = 50; // 10 contactos por página
+  let paginaActual = localStorage.getItem("paginaActual")
+    ? parseInt(localStorage.getItem("paginaActual"))
+    : 1;
 
   function mostrarContactos(pagina) {
     contactosDiv.innerHTML = "";
@@ -5852,27 +5854,66 @@ No dudes en contactarme si tienes alguna pregunta o deseas más información. ¡
     });
   }
 
-  function actualizarPaginacion() {
-    document.getElementById("anterior").disabled = paginaActual === 1;
-    document.getElementById("siguiente").disabled =
-      paginaActual === Math.ceil(contactos.length / contactosPorPagina);
+  function crearBotonesPaginacion() {
+    const paginacionDiv = document.createElement("div");
+    paginacionDiv.className = "paginacion";
+
+    const totalPaginas = Math.ceil(contactos.length / contactosPorPagina);
+    const maxBotones = 5; // Máximo número de botones a mostrar
+    const paginasMostradas = Math.min(maxBotones, totalPaginas);
+
+    let inicio = Math.max(paginaActual - Math.floor(paginasMostradas / 2), 1);
+    let fin = Math.min(inicio + paginasMostradas - 1, totalPaginas);
+
+    if (fin - inicio < paginasMostradas - 1) {
+      inicio = Math.max(fin - paginasMostradas + 1, 1);
+    }
+
+    for (let i = inicio; i <= fin; i++) {
+      const botonPagina = document.createElement("button");
+      botonPagina.textContent = i;
+      if (i === paginaActual) {
+        botonPagina.classList.add("activo");
+      }
+      botonPagina.addEventListener("click", () => {
+        paginaActual = i;
+        mostrarContactos(paginaActual);
+        actualizarPaginacion();
+      });
+      paginacionDiv.appendChild(botonPagina);
+    }
+
+    const anterior = document.createElement("button");
+    anterior.textContent = "Anterior";
+    anterior.addEventListener("click", () => {
+      if (paginaActual > 1) {
+        paginaActual--;
+        mostrarContactos(paginaActual);
+        actualizarPaginacion();
+      }
+    });
+    paginacionDiv.prepend(anterior);
+
+    const siguiente = document.createElement("button");
+    siguiente.textContent = "Siguiente";
+    siguiente.addEventListener("click", () => {
+      if (paginaActual < totalPaginas) {
+        paginaActual++;
+        mostrarContactos(paginaActual);
+        actualizarPaginacion();
+      }
+    });
+    paginacionDiv.append(siguiente);
+
+    return paginacionDiv;
   }
 
-  document.getElementById("anterior").addEventListener("click", () => {
-    if (paginaActual > 1) {
-      paginaActual--;
-      mostrarContactos(paginaActual);
-      actualizarPaginacion();
-    }
-  });
-
-  document.getElementById("siguiente").addEventListener("click", () => {
-    if (paginaActual < Math.ceil(contactos.length / contactosPorPagina)) {
-      paginaActual++;
-      mostrarContactos(paginaActual);
-      actualizarPaginacion();
-    }
-  });
+  function actualizarPaginacion() {
+    const paginacionDiv = document.querySelector(".paginacion");
+    if (paginacionDiv) paginacionDiv.remove();
+    document.body.appendChild(crearBotonesPaginacion());
+    localStorage.setItem("paginaActual", paginaActual);
+  }
 
   mostrarContactos(paginaActual);
   actualizarPaginacion();
