@@ -32,7 +32,7 @@ No dudes en contactarme si tienes alguna pregunta o deseas más información. ¡
     new Contacto("RAECHEL", "CAROLINA CARDENAS SANCHEZ", "4125588804"),
     new Contacto("HUMBERTO", "LUIS HERNANDEZ VILLAMIZAR", "4166090055"),
     new Contacto("NICOLAS", "ANTONIO MATA VASQUEZ", "4248882424"),
-    new Contacto("'-DOUGLAS", "LENIN YUSTY MORALES", "4140217864"),
+    new Contacto("DOUGLAS", "LENIN YUSTY MORALES", "4140217864"),
     new Contacto("LIZ", "ADRIANA COLMENARES MARTINEZ", "4122927596"),
     new Contacto("SAMUEL", "JESUS COLINA MIRANDA", "4126414324"),
     new Contacto("JESMIR", "BELIZA ANDREINA FLORES CONTRERAS", "4242546998"),
