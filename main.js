@@ -9,13 +9,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     obtenerEnlaceWhatsApp() {
       const saludo = `¡Hola ${this.nombre} ${this.apellido}!, 
       
-Soy Joberland Rafael Suniaga, tu asesor de ventas de confianza. 🚀 Me encantaría mostrarte nuestras innovadoras soluciones tecnológicas que pueden transformar tu negocio.
+Le informo que ya no trabajo en Onprotec, pero sigo a su disposición para atender sus requerimientos a través de este nuevo número. Continúo ofreciendo los mismos productos de calidad que antes, con la confianza y compromiso de siempre.
 
-🕘 Horario de atención: 9am a 5pm
+Agradezco su apoyo y quedo atento para cualquier consulta o pedido.
 
-🌐 Descubre nuestras ofertas exclusivas: https://suniagajoberland.github.io/tienda/
-
-No dudes en contactarme si tienes alguna pregunta o deseas más información. ¡Estamos aquí para ayudarte!
+Saludos cordiales,  
+Joberland Suniaga.
 `;
       const numeroConCodigo = `+58${this.telefono}`;
       const enlace = `https://wa.me/${numeroConCodigo}?text=${encodeURIComponent(
