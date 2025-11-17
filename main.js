@@ -25,43 +25,6 @@ Joberland Suniaga.
   }
 
   const contactos = [
-    new Contacto("REYNNER", "JESUS ESTRADA CARDENAS", "4121144903"),
-    new Contacto("ROSNY", "ARMANDO CACERES QUINTERO", "4128272470"),
-    new Contacto("JOSELYN", "ESTELA GIL DE GONZALEZ", "4142260280"),
-    new Contacto("RAECHEL", "CAROLINA CARDENAS SANCHEZ", "4125588804"),
-    new Contacto("HUMBERTO", "LUIS HERNANDEZ VILLAMIZAR", "4166090055"),
-    new Contacto("NICOLAS", "ANTONIO MATA VASQUEZ", "4248882424"),
-    new Contacto("DOUGLAS", "LENIN YUSTY MORALES", "4140217864"),
-    new Contacto("LIZ", "ADRIANA COLMENARES MARTINEZ", "4122927596"),
-    new Contacto("SAMUEL", "JESUS COLINA MIRANDA", "4126414324"),
-    new Contacto("JESMIR", "BELIZA ANDREINA FLORES CONTRERAS", "4242546998"),
-    new Contacto("HUMBERTO", "FRANCISCO TREJO FIGUEROA", "4143351071"),
-    new Contacto("JESUS", "RICARDO RIVERO CARRILLO", "4145517983"),
-    new Contacto("LISANDRA", "ANDREINA CHAVEZ GARCIA", "4241925243"),
-    new Contacto("FROYMAR", "LIXMAR RODRIGUEZ MARTINEZ", "4121564990"),
-    new Contacto("DEIBY", "JOSE MALDONADO BAPTISTA", "4242314502"),
-    new Contacto("GUILLERMO", "ENRIQUE BLANCO GALEANO", "4126300250"),
-    new Contacto("ROSANNI", "DEL CARMEN LEON FERNANDEZ", "4121851337"),
-    new Contacto("JEANFER", "DANIEL MONTILLA RANGEL", "4121495458"),
-    new Contacto("YENILIBET", "CAMACHO VANIER", "4128201425"),
-    new Contacto("BARBARA", "DEL VALLE MARTINEZ CARVAJAL", "4142056281"),
-    new Contacto("ESTHER", "DEL PILAR VELASQUEZ VILLARROEL", "4140135097"),
-    new Contacto("JOEL", "MANUEL CORDERO ROBLES", "4120198745"),
-    new Contacto("SUSANA", "ISABEL RAMIREZ ROMERO", "4142285605"),
-    new Contacto("ROBERTO", "MACHADO CANOURA", "4242850129"),
-    new Contacto("DANIEL", "EDUARDO RIVERO RAVEN", "4241939486"),
-    new Contacto("JESUS", "MIGUEL BRITO DIAZ", "4125787211"),
-    new Contacto("CARLOS", "EDUARDO MENESES BARILLAS", "4265141167"),
-    new Contacto("KARINA", "DEL VALLE MARTINEZ NIEVES", "4142799392"),
-    new Contacto("FEIDYMAR", "DEL VALLE CARVAJAL RODRIGUEZ", "4120492085"),
-    new Contacto("SADDAM", "NASR GARCIA", "4127789584"),
-    new Contacto("MARIBEL", "SOFIA TORRES MENA", "4142709194"),
-    new Contacto("ALEJANDRO", "JOSE MONTEVERDE", "4249447133"),
-    new Contacto("JOSE", "DANIEL MEDINA GOMEZ", "4120751929"),
-    new Contacto("BARBARA", "AZTILEY RAMOS ZAPATA", "4125385143"),
-    new Contacto("JOSE", "ALEJANDRO CORONA LUGO", "4149621322"),
-    new Contacto("ENYEMEL", "MANUEL LAREZ MANEIRO", "4122501939"),
-    new Contacto("WILLEIMA", "MARGARITA SUTIL BLANCO", "4242464187"),
     new Contacto("MICHAEL", "JOSE MARQUEZ ARAGORT", "4126268604"),
     new Contacto("MARIA", "CAROLINA MADRID PARRA", "4124673798"),
     new Contacto("JORGE", "LUIS GONZALEZ JIMENEZ", "4148083709"),
@@ -5822,7 +5785,7 @@ Joberland Suniaga.
   ];
 
   const contactosDiv = document.getElementById("contactos");
-  const contactosPorPagina = 50; // 10 contactos por página
+  const contactosPorPagina = 10; // 10 contactos por página
   let paginaActual = localStorage.getItem("paginaActual")
     ? parseInt(localStorage.getItem("paginaActual"))
     : 1;
